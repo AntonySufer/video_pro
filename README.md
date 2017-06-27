@@ -1,7 +1,8 @@
 # video_pro
 videojs 视频播放，支持移动端
 
-##js代码
+#js代码
+
 ---js
 var video_page ={
       init:function(){
@@ -55,4 +56,4 @@ var video_page ={
  //执行
  video_page.init();
 
-
+---js
