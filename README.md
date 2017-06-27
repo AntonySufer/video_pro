@@ -3,7 +3,7 @@ videojs 视频播放，支持移动端
 
 #js代码
 
----js
+```js
 var video_page ={
       init:function(){
 		  var _this = this ;
@@ -56,4 +56,4 @@ var video_page ={
  //执行
  video_page.init();
 
----js
+```js
