@@ -1,0 +1,103 @@
+<!-- 
+ * @author 黄丽敏
+ * @date 2017.06.22
+ * @disc 使用教程页面
+ * 
+ -->
+
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" />
+		<title>客户版使用教程</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link href="css/video-js.css" rel="stylesheet">
+		<script src="js/jquery-1.11.2.min.js"></script>
+		<script src="js/video/js/video.min.js"></script>	
+		<script src="js/vendorscript.js"></script>
+		<script src="js/util.js"></script>
+
+		<style>
+		.m{ width: 640px; height: 264px; margin-left: auto; margin-right: auto;  }
+		img{
+			 height:264px;
+		}
+		.modal{
+			    position: fixed;
+				top: 0px;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				z-index: 1050;
+				display: none;
+				overflow: hidden;
+				-webkit-overflow-scrolling: touch;
+				outline: 0;
+		}
+		.modal-header {
+			padding: 0px;
+			border-bottom: 1px solid #e5e5e5;
+       }
+	   .modal-body {
+			position: relative;
+			 padding: 0px; 
+       }
+		.modal-content {
+			position: relative;
+			 background-color :null;
+			-webkit-background-clip: padding-box;
+			background-clip: padding-box;
+			border-radius: 6px;
+			outline: 0;
+			-webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+ 			box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+          }
+		  .modal-header .close {
+			margin-top: -2px;
+			color: #f1eeee;
+			z-index: 999999;
+		}
+
+		.video-js .vjs-tech {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			}
+		</style>
+	</head>
+ 
+	<body>
+		   <div class="use-box videoContainer" videohref="video/khloginGuide.mp4" imghref="img/loginguid.png" >
+				<div class="use-tlt">客户版登录注册指导</div>
+				<img class="use-video" width="width" class="init" src="img/loginguid.png" />
+				<img class="init" src="img/playbig.png" />
+		   </div>
+		   <div class="use-box videoContainer" videohref="video/khShopping.mp4" imghref="img/shoppingguid.png">
+			    <div class="use-tlt">客户版购物指导</div>
+				<img class="use-video" width="width" class="init" src="img/shoppingguid.png" />
+				<img class="init" src="img/playbig.png" />
+		  </div>
+		   <div class="use-box videoContainer"  videohref="video/khjfWallet.mp4" imghref="img/jfWallet.png">
+			    <div class="use-tlt">积分钱包指导</div>
+				<img class="use-video" width="width" class="init" src="img/jfWallet.png" />
+				<img class="init" src="img/playbig.png" />
+		  </div>
+		  <div class="use-box videoContainer" videohref="video/khMyModule.mp4" imghref="img/loginguid.png" >
+			    <div class="use-tlt">我的模块指导</div>
+				<img class="use-video" width="width" class="init" src="img/myModel.png" />
+				<img class="init" src="img/playbig.png" />
+		  </div>
+       <script>
+         $('.videoContainer').on('click',function(){
+             var imghref= $(this).attr("imghref");
+			 var videoUrl = $(this).attr("videohref");
+			 window.location.href="videoDetail.html?videoUrl="+videoUrl+"&imghref="+imghref+"temp="+"001"+(new Date()).valueOf();
+		 })
+	   </script>
+	</body>
+
+</html>
